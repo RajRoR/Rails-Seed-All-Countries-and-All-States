@@ -1,5 +1,4 @@
-Country.delete_all
-connection.execute("ALTER TABLE countries AUTO_INCREMENT = 1")
+DatabaseCleaner.clean_with(:truncation, :only => ['countries'])
 Country.create(:id=>1,:iso=>"AD",:name=>"Andorra")
 Country.create(:id=>2,:iso=>"AE",:name=>"United Arab Emirates")
 Country.create(:id=>3,:iso=>"AF",:name=>"Afghanistan")
@@ -252,8 +251,7 @@ Country.create(:id=>249,:iso=>"ZW",:name=>"Zimbabwe")
 Country.create(:id=>250,:iso=>"CS",:name=>"Serbia and Montenegro")
 Country.create(:id=>251,:iso=>"AN",:name=>"Netherlands Antilles")
 
-Region.delete_all
-connection.execute("ALTER TABLE regions AUTO_INCREMENT=1")
+DatabaseCleaner.clean_with(:truncation, :only => ['regions'])
 Region.create(:id=>1,:iso=>"06",:name=>"Parròquia de Sant Julià de Lòria",:country_id=>1)
 Region.create(:id=>2,:iso=>"05",:name=>"Parròquia d'Ordino",:country_id=>1)
 Region.create(:id=>3,:iso=>"04",:name=>"Parròquia de la Massana",:country_id=>1)
@@ -4062,8 +4060,7 @@ Region.create(:id=>3805,:iso=>"01",:name=>"Manicaland",:country_id=>249)
 Region.create(:id=>3806,:iso=>"09",:name=>"Bulawayo",:country_id=>249)
 Region.create(:id=>3807,:iso=>"10",:name=>"Harare Province",:country_id=>249)
 
-City.delete_all
-connection.execute("ALTER TABLE cities AUTO_INCREMENT = 1")
+DatabaseCleaner.clean_with(:truncation, :only => ['cities'])
 City.create(:id=>1,:name=>"Alavieska",:region_id=>919)
 City.create(:id=>2,:name=>"Hyrynsalmi",:region_id=>919)
 City.create(:id=>3,:name=>"Kuusamo",:region_id=>919)
