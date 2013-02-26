@@ -2,6 +2,8 @@ To get a new seeds.rb file, just run parse_countries.php.
 
 This will build a seeds file to populate countries and states tables with all countries in the world along with all of their admin 1 regions. These regions correspond to what would be a state within the US. The generated file should be in utf8.
 
+Install `gem 'database_cleaner'` for table truncation.
+
 The database model is pretty straightforward:
 
 countries:
